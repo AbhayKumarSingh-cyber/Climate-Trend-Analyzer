@@ -28,7 +28,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.post(`http://127.0.0.1:8000/api/analyze`, null, {
+      const response = await axios.post(`https://climate-trend-analyzer-ddrg.onrender.com/api/analyze`, null, {
         params: { lat, lon, start_year: startYear, end_year: endYear }
       });
       setData(response.data);
